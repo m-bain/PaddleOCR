@@ -801,8 +801,9 @@ def main():
             if result is not None:
                 for idx in range(len(result)):
                     res = result[idx]
-                    for line in res:
-                        logger.info(line)
+                    if len(res) > 0:
+                        for line in res:
+                            logger.info(line)
         elif args.type == 'structure':
             img, flag_gif, flag_pdf = check_and_read(img_path)
             if not flag_gif and not flag_pdf:
