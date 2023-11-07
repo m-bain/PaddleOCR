@@ -801,7 +801,7 @@ def main():
             if result is not None:
                 for idx in range(len(result)):
                     res = result[idx]
-                    if len(res) > 0:
+                    if res is not None:
                         for line in res:
                             logger.info(line)
         elif args.type == 'structure':
